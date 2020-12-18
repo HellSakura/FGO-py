@@ -3394,6 +3394,7 @@
     <addaction name="MENU_SCRIPT_GACHA"/>
     <addaction name="separator"/>
     <addaction name="MENU_SCRIPT_MAPKEY"/>
+    <addaction name="MENU_SCRIPT_JACKPOT"/>
    </widget>
    <addaction name="MENU_FILE"/>
    <addaction name="MENU_SCRIPT"/>
@@ -3487,6 +3488,17 @@
   <action name="MENU_FILE_CMDHERE">
    <property name="text">
     <string>命令提示符</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI Light</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="MENU_SCRIPT_JACKPOT">
+   <property name="text">
+    <string>抽奖池</string>
    </property>
    <property name="font">
     <font>
@@ -3910,6 +3922,22 @@
    <signal>triggered()</signal>
    <receiver>fgoMainWindow</receiver>
    <slot>cmdHere()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MENU_SCRIPT_JACKPOT</sender>
+   <signal>triggered()</signal>
+   <receiver>fgoMainWindow</receiver>
+   <slot>runJackpot()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>

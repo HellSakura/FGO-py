@@ -184,7 +184,7 @@ class MyMainWindow(QMainWindow):
         self.ui.BTN_ONEBATTLE.setEnabled(False)
         self.ui.BTN_MAIN.setEnabled(False)
         self.ui.BTN_USER.setEnabled(False)
-        self.ui.MENU_SCRIPT_GACHA.setEnabled(False)
+        self.ui.MENU_SCRIPT_GACHA.setEnabled(False) 
         self.ui.BTN_PAUSE.setEnabled(True)
         self.ui.BTN_STOP.setEnabled(True)
         self.ui.BTN_PAUSE.setChecked(False)
@@ -194,7 +194,7 @@ class MyMainWindow(QMainWindow):
         self.ui.BTN_USER.setEnabled(True)
         self.ui.MENU_SCRIPT_GACHA.setEnabled(True)
         self.ui.BTN_PAUSE.setEnabled(False)
-        self.ui.BTN_STOP.setEnabled(False)
+        self.ui.BTN_STOP.setEnabled(False) 
     def loadParty(self,x):
         self.ui.TXT_PARTY.setText(config[x]['partyIndex'])
         skillInfo=eval(config[x]['skillInfo'])
@@ -237,11 +237,12 @@ class MyMainWindow(QMainWindow):
         fgoFunc.masterSkill=[[int((lambda self:eval(f'self.ui.TXT_MASTER_{i}_{j}.text()'))(self))for j in range(4if i==2else 3)]for i in range(3)]
         if self.serialno!=fgoFunc.base.serialno:fgoFunc.base=fgoFunc.Base(self.serialno)
         fgoFunc.IMG_FRIEND=self.IMG_FRIEND
-    def runOneBattle(self):self.runFunc(fgoFunc.oneBattle)
+    def runOneBattle(self):self.runFunc(fgoFunc.battle)
     def runUser(self):self.runFunc(fgoFunc.userScript)
     def runGacha(self):self.runFunc(fgoFunc.gacha)
+    def runJackpot(self):self.runFunc(fgoFunc.jackpot)
     def runMain(self):
-        text,ok=QInputDialog.getItem(self,'肝哪个','在下拉列表中选择战斗函数',['oneBattle','userScript'])
+        text,ok=QInputDialog.getItem(self,'肝哪个','在下拉列表中选择战斗函数',['battle','userScript'])
         if ok and text:self.runFunc(fgoFunc.main,self.ui.TXT_APPLE.value(),self.ui.CBX_APPLE.currentIndex(),eval('fgoFunc.'+text))
     def pause(self):fgoFunc.suspendFlag=not fgoFunc.suspendFlag
     def stop(self):fgoFunc.terminateFlag=True
@@ -251,7 +252,7 @@ class MyMainWindow(QMainWindow):
         self.setWindowFlags(self.windowFlags()^Qt.WindowStaysOnTopHint)
         self.show()
     def mapKey(self,x):self.grabKeyboard()if x else self.releaseKeyboard()
-    def about(self):QMessageBox.about(self,'关于','作者:\thgjazhgj  \n项目地址:https://github.com/hgjazhgj/FGO-py  \n联系方式:huguangjing0411@geektip.cc  \n防呆不放蠢,大力出奇迹!')
+    def about(self):QMessageBox.about(self,'关于','作者:\thgjazhgj  \n原项目地址:https://github.com/hgjazhgj/FGO-py  \n联系方式:huguangjing0411@geektip.cc  \n修改者:hellsakura  \n项目地址:https://github.com/HellSakura/FGO-py')
 
 if __name__=='__main__':
     app=QApplication(sys.argv)

@@ -4,7 +4,7 @@
 适用系统 macOS  
 原GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)  
 ***
-~~双击打开用就完了,本脚本几乎没有限制~~
+~~双击打开用就完了,本脚本几乎没有限制~~  
 自4.0.3版本后，原作者使用了win32api，而`pywin32`库无法在macOS系统中使用  
 加上macOS中相对好用且更新~~修BUG~~频繁的只有**网易MUMU模拟器**  
 而mumu模拟器不支持maxtouch,只能用minitouch  
@@ -14,10 +14,10 @@
 UI在macOS下的显示效果
 ![ui](./doc/UI(mac).png)
 ## 使用说明 Instruction
-* 首先你需要保证安装的Python版本在**3.7**版本以下
-不然会各种花式无法安装`airtest`库
-此处原因在于`airtest`库所使用的`opencv-contrib-python`版本需要小于等于3.4.2.17
-而`opencv-contrib-python`的3.4.2.17版本仅支持到Python3.7
+* 首先你需要保证安装的Python版本在**3.7**版本以下  
+不然会各种花式无法安装`airtest`库  
+此处原因在于`airtest`库所使用的`opencv-contrib-python`版本需要小于等于3.4.2.17  
+而`opencv-contrib-python`的3.4.2.17版本仅支持到Python3.7  
 * 若更改过pip源可以去[pypi](https://pypi.org/project/opencv-contrib-python/3.4.2.17/#files)下载后手动安装
 1. 所使用的库有`configParser` `PyQt5` `airtest` ，请手动使用`pip install`命令进行安装，报错也方便排查原因
 2. 使用Homebrew安装adb ~~airtest自带macOS版的不能使用~~

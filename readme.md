@@ -42,6 +42,7 @@ Homebrew安装的adb路径为
 其余使用方式和原版本一致
 ## 当前加入的原版本功能
 ------
+- [x] 4.9.0版本技能冷却及np条位置
 - [x] 截止4.7.0版本 部分延时调整
 - [x] 4.6.0版本 无限池抽取
 - [x] 4.3.2版本 重新设计的选卡代码
@@ -62,3 +63,6 @@ Traceback (most recent call last):
     def getPartyIndex(self):return cv2.minMaxLoc(cv2.matchTemplate(self.im[58:92,768:1152],IMG_PARTYINDEX,cv2.TM_SQDIFF_NORMED))[2][0]//37+1
 cv2.error: OpenCV(3.4.2) /Users/travis/build/skvark/opencv-python/opencv/modules/imgproc/src/templmatch.cpp:1102: error: (-215:Assertion failed) (depth == 0 || depth == 5) && type == _templ.type() && _img.dims() <= 2 in function 'matchTemplate'
 ```
+------
+* ~~考试完再想办法根据原作者的提示更改DirListener类~~
+原作者提示在[这里](https://github.com/hgjazhgj/FGO-py#%E5%BF%AB%E9%80%9F%E6%9F%A5%E9%94%99%E5%BC%95%E5%AF%BC-when-error-occurred)

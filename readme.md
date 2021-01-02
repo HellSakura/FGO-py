@@ -1,15 +1,15 @@
 # "智能战斗不间断,不靠礼装不用拐"的FGO全自动脚本
-改自版本[v4.0.3] 原readme见[这里](./doc/readme.md)
-仅适用于命运-冠位指定安卓简体中文版本
-适用系统 macOS
-原GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)
+改自版本[v4.0.3] 原readme见[这里](./doc/readme.md)  
+仅适用于命运-冠位指定安卓简体中文版本  
+适用系统 macOS  
+原GitHub项目地址:[https://github.com/hgjazhgj/FGO-py/](https://github.com/hgjazhgj/FGO-py/)  
 ***
 ~~双击打开用就完了,本脚本几乎没有限制~~
-自4.0.3版本后，原作者使用了win32api，而`pywin32`库无法在macOS系统中使用
-加上macOS中相对好用且更新~~修BUG~~频繁的只有**网易MUMU模拟器**
-而mumu模拟器不支持maxtouch,只能用minitouch
-~~作为一个Python新手又怕改了Base类出现各种BUG~~
-于是在此版本基础上进行魔改以加入原作者的新功能
+自4.0.3版本后，原作者使用了win32api，而`pywin32`库无法在macOS系统中使用  
+加上macOS中相对好用且更新~~修BUG~~频繁的只有**网易MUMU模拟器**  
+而mumu模拟器不支持maxtouch,只能用minitouch  
+~~作为一个Python新手又怕改了Base类出现各种BUG~~  
+于是在此版本基础上进行魔改以加入原作者的新功能  
 
 UI在macOS下的显示效果
 ![ui](./doc/UI(mac).png)
